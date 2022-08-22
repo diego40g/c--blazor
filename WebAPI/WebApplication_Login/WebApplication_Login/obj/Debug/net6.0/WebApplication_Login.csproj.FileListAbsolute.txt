@@ -29,3 +29,9 @@ H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication
 H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\obj\Debug\net6.0\WebApplication_Login.pdb
 H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\obj\Debug\net6.0\WebApplication_Login.genruntimeconfig.cache
 H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\obj\Debug\net6.0\ref\WebApplication_Login.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\System.Data.SqlClient.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+H:\Programacion\UdemyCourse\c#-blazor\WebAPI\WebApplication_Login\WebApplication_Login\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
