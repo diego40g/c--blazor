@@ -173,6 +173,11 @@
 
     private async Task deleteClick(int id)
     {
+        if (!await JS.InvokeAsync<bool>("confirm", "Estas seguro"))
+        {
+            return;
+        }
+
         var depObj = new DepartmentClass()
         {
             DepartmentId = DepartmentId,
