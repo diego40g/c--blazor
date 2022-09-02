@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hAN3wzxspgl6FsaWemqj2xTLhUn2celAnc3XpOCvjeo=",
+  "Hash": "Q4GplExccvzTJRMAntHRG2IERYe6CsBWj17xIUkNOkA=",
   "Source": "BlazorAppFrontEnd",
   "BasePath": "_content/BlazorAppFrontEnd",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "H:\\Programacion\\UdemyCourse\\c#-blazor\\BlazorAppFrontEnd\\BlazorAppFrontEnd\\wwwroot\\Imagen\\default-user.png",
+      "SourceId": "BlazorAppFrontEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Programacion\\UdemyCourse\\c#-blazor\\BlazorAppFrontEnd\\BlazorAppFrontEnd\\wwwroot\\",
+      "BasePath": "_content/BlazorAppFrontEnd",
+      "RelativePath": "Imagen/default-user.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagen\\default-user.png"
     }
   ]
 }
