@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q4GplExccvzTJRMAntHRG2IERYe6CsBWj17xIUkNOkA=",
+  "Hash": "kM5M2uCpTcqrVe9MG/+o+vcBz62EPxTDBBkGMkRrllQ=",
   "Source": "BlazorAppFrontEnd",
   "BasePath": "_content/BlazorAppFrontEnd",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Intel Extreme\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js",
+      "SourceId": "BlazorInputFile",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Intel Extreme\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\",
+      "BasePath": "_content/BlazorInputFile",
+      "RelativePath": "inputfile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Intel Extreme\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
+    },
     {
       "Identity": "H:\\Programacion\\UdemyCourse\\c#-blazor\\BlazorAppFrontEnd\\BlazorAppFrontEnd\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorAppFrontEnd.styles.css",
       "SourceId": "BlazorAppFrontEnd",

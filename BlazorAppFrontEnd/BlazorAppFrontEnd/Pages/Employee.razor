@@ -5,6 +5,8 @@
 @inject IHttpClientFactory ClientFactory
 @inject Microsoft.Extensions.Configuration.IConfiguration config
 @inject IJSRuntime JS
+@using BlazorInputFile
+@using System.IO
 
 <h3>Employee</h3>
 
@@ -90,9 +92,10 @@
                 </div>
                 <div class="p-2 w-50 bd-highlight">
                     <img width="250" src="@PhotoPath/@PhotoFileName"/>
+                    <BlazorInputFile.InputFile class="m-2" OnChange="UploadFile"/>
                 </div>
 
-                @if(modalTitle == "Add Department")
+                @if(modalTitle == "Add Employee")
                 {
                     <button type="button" class="btn btn-primary" @onclick="createClick">
                         Create
@@ -267,5 +270,26 @@
 
         await JS.InvokeVoidAsync("alert", res);
         await refreshList();
+    }
+
+    private async Task UploadFile(IFileListEntry[] files)
+    {
+        var file = files.FirstOrDefault();
+        var ms = new MemoryStream();
+        await file.Data.CopyToAsync(ms);
+
+        var content = new MultipartFormDataContent { { new ByteArrayContent(ms.GetBuffer()), "\"file\"", file.Name } };
+
+        var request = new HttpRequestMessage(HttpMethod.Post,
+            config["API_URL"] + "employee/savefile");
+        request.Content = content;
+
+        var client = ClientFactory.CreateClient();
+
+        var response = await client.SendAsync(request);
+
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+        PhotoFileName =  await JsonSerializer.DeserializeAsync<string>(responseStream);
+
     }
 }
