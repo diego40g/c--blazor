@@ -1,0 +1,29 @@
+﻿@page "/"
+@inject BlazorModalShowModal.Services.IModalService Modal;
+@using BlazorModalShowModal.Data;
+@using BlazorModalShowModal.Services;
+
+<h1>Hello, world!</h1>
+
+<button @onclic="ShowModal" class="btn btn-primary">Ver Modal</button>
+
+@code{
+    void ShowModal()
+    {
+        var parameters = new ModalParameters();
+        parameters.Add("FormId",3);
+
+        Modal.OnClose += ModalClosed;
+        Modal.Show<SignUp>("Sign Up From", parameters);
+    }
+    void ModalClosed(ModalResult modalResult)
+    {
+        Console.WriteLine("Modal Closed");
+        if(modalResult.Cancelled){
+            Console.WriteLine("Modal Cancelled");
+        }else{
+            Console.WriteLine(modalResult.Data.ToString());
+        }
+        Modal.OnClose -= ModalClosed;
+    }
+}

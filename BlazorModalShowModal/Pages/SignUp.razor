@@ -1,0 +1,54 @@
+﻿@inject BlazorModalShowModal.Services.IModalService ModalService
+@using BlazorModalShowModal.Data
+@using BlazorModalShowModal.Services
+
+<h3>Component</h3>
+
+@if(ShowForm){
+    <div class="simple-form">
+        <div class="form-group">
+            <label for="first-name">Nombres</label>
+            <input @bind="FirstName" type="text" class="form-control" id="first-name" placeholder="Ingresa tus nombres"/>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Apellidos</label>
+            <input @bind="LastName" type="text" class="form-control" id="last-name" placeholder="Ingresa tus apellidos"/>
+        </div>
+
+        <button @onclick="SubmitForm" class="btn btn-primary">Enviar</button>
+        <button @onclick="Cancel" class="btn btn-secondary">Cancelar</button>
+    </div>
+}else{
+    <div class="alert alert-success" role="alert">
+        Gracias @FirstName @LastName form (Id: @FormId) envio satisfactorio. <br/>
+        <button class="btn btn-primary" @onclick="Done">Correcto</button>
+    </div>
+}
+
+@code {
+    [CascadingParameter] ModalParameters Parameters { get; set; }
+    [CascadingParameter] BlazoredModal BlazoredModal { get; set; }
+
+    bool ShowForm { get; set; } = true;
+    string FirstName { get; set; } = "";
+    string LastName { get; set; } = "";
+    int FormId { get; set; }
+
+    protected override void OnInitialized()
+    {
+        FormId = Parameters.Get<int>("FormId");
+        BlazoredModal.SetTitle("Form Title");
+    }
+
+    void SubmitForm()
+    {
+        ShowForm = false;
+    }
+
+    void Done(){
+        ModalService.Close(ModalResult.Ok("Form Submitted"));
+    }
+    void Cancel(){
+        ModalService.Close(ModalResult.Cancel());
+    }
+}
